@@ -1,0 +1,94 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #cce7f0;
+    margin: 0;
+}
+
+.calculator {
+    width: 360px;
+    padding: 25px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.calculator:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.display input {
+    width: 100%;
+    height: 70px;
+    font-size: 2em;
+    padding: 15px;
+    border: none;
+    background: #e0f7fa;
+    border-radius: 12px;
+    text-align: right;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.4em;
+    border: none;
+    background: #0077b6;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background: #005f73;
+}
+
+button:active {
+    background: #48cae4;
+    transform: scale(0.98);
+}
+
+.operator {
+    background: #ffb703;
+    color: white;
+}
+
+button.operator:hover {
+    background: #fb8500;
+}
+
+input[type="text"] {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+/* Tambahan gaya untuk tampilan yang lebih baik */
+button:focus {
+    outline: none; /* Menghilangkan outline saat tombol diklik */
+}
+
+button {
+    border: 2px solid transparent; /* Border transparan untuk transisi */
+}
+
+button:hover {
+    border: 2px solid #005f73; /* Border saat hover */
+}

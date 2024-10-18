@@ -1,0 +1,165 @@
+/* General body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #e3f2fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.app-container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    border: 2px solid #90caf9;
+    position: relative;
+    animation: fadeIn 0.5s; /* Animasi muncul */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #1976d2;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.todo-input {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.todo-input input {
+    padding: 14px;
+    width: 280px;
+    border: 2px solid #90caf9;
+    border-radius: 10px;
+    font-size: 1em;
+    background-color: #f9fbe7;
+    transition: border 0.3s ease;
+}
+
+.todo-input input:focus {
+    border-color: #64b5f6;
+}
+
+.btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 5px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.add-btn {
+    background-color: #64b5f6;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #ffa726;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #ef5350;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background-color: #bbdefb;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    flex-wrap: nowrap;
+    animation: slideIn 0.3s; /* Animasi masuk */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+li.completed {
+    background-color: #c8e6c9;
+    color: #757575;
+    text-decoration: none; /* Hilangkan garis tengah */
+}
+
+.task-text {
+    flex: 1;
+    margin-left: 10px;
+    word-break: break-word;
+    text-align: left; /* Tambahkan ini untuk rata kiri */
+}
+
+
+.task-actions {
+    display: flex;
+    gap: 5px;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
